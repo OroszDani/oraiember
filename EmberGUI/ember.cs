@@ -31,5 +31,14 @@ namespace GitConsoleEmber
                    kor == ember.kor &&
                    cim == ember.cim;
         }
+
+        public override int GetHashCode()
+        {
+            int hashCode = 875447857;
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(nev);
+            hashCode = hashCode * -1521134295 + kor.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(cim);
+            return hashCode;
+        }
     }
 }
