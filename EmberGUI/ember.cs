@@ -31,10 +31,5 @@ namespace GitConsoleEmber
                    kor == ember.kor &&
                    cim == ember.cim;
         }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(nev, kor, cim);
-        }
     }
 }
